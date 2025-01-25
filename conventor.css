@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Tufuli';
+    src: url('fonts/alfont_com_TufuliArabicDEMO-Medium.ttf') format('truetype'); /* Adjust path as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'Tufuli', sans-serif;
+    background-image: url('backgroud_cat.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.converter-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #ff5252;
+}
+#result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}

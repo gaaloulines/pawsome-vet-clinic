@@ -1,0 +1,110 @@
+.services-main {
+    background-color: #f0f8ff;
+    min-height: calc(100vh - 100px);
+    padding: 2rem 0;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: calc(33.33% - 1rem);
+    position: relative;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Adding a subtle hover effect */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Content inside the service card */
+.service-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Input field for quantity and Add to Cart button */
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #45a049;
+}
+
+/* Ensure the form elements are clickable */
+.quantity-input,
+.add-to-cart-button {
+    pointer-events: auto; /* Ensures they can be clicked */
+    position: relative;
+    z-index: 3; /* Ensure they are above other elements */
+}
+
+/* Styling for all input fields and textareas */
+form .form-group input, 
+form .form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem; /* Increased padding for a larger input box */
+    font-size: 1rem;
+    border: 2px solid #ff6b6b; /* Soft red border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    color: #333; /* Dark text for readability */
+    transition: all 0.3s ease; /* Smooth transitions for focus effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    pointer-events: auto; /* Allow interaction */
+}
+
+/* Focus effect for input fields */
+form .form-group input:focus, 
+form .form-group textarea:focus {
+    border-color: #ff5252; /* Darker red border when focused */
+    box-shadow: 0 4px 8px rgba(255, 82, 82, 0.2); /* Focus shadow */
+    outline: none; /* Remove the default focus outline */
+    background-color: #fff; /* White background on focus */
+}
+
+form .form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Placeholder text styling */
+form .form-group input::placeholder,
+form .form-group textarea::placeholder {
+    color: #888; /* Gray placeholder text */
+    font-style: italic;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - Pawsome Vet Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tufuli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="conventor.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h2>Currency Converter</h2>
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" min="0" step="0.01" value="1">
+        </div>
+        <div class="form-group">
+            <label for="fromCurrency">From:</label>
+            <select id="fromCurrency"></select>
+        </div>
+        <div class="form-group">
+            <label for="toCurrency">To:</label>
+            <select id="toCurrency"></select>
+        </div>
+        <button id="convertBtn">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const amount = document.getElementById('amount');
+        const fromCurrency = document.getElementById('fromCurrency');
+        const toCurrency = document.getElementById('toCurrency');
+        const convertBtn = document.getElementById('convertBtn');
+        const result = document.getElementById('result');
+
+        // Example exchange rates (you should use real-time rates in a production app)
+        const exchangeRates = {
+            USD: 1,
+            EUR: 0.84,
+            GBP: 0.72,
+            JPY: 109.69,
+            CAD: 1.21
+        };
+
+        // Populate currency dropdowns
+        for (const currency in exchangeRates) {
+            const option1 = document.createElement('option');
+            option1.value = currency;
+            option1.textContent = currency;
+            fromCurrency.appendChild(option1);
+
+            const option2 = document.createElement('option');
+            option2.value = currency;
+            option2.textContent = currency;
+            toCurrency.appendChild(option2);
+        }
+
+        convertBtn.addEventListener('click', function() {
+            const fromRate = exchangeRates[fromCurrency.value];
+            const toRate = exchangeRates[toCurrency.value];
+            const convertedAmount = (amount.value / fromRate) * toRate;
+
+            result.textContent = `${amount.value} ${fromCurrency.value} = ${convertedAmount.toFixed(2)} ${toCurrency.value}`;
+        });
+    });
+    </script>
+</body>
+</html>

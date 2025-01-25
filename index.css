@@ -1,0 +1,86 @@
+.welcome-message {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+main{
+    background-color: #f0f8ff;
+}
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33.333% - 1rem);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+
+    .feature-card {
+        flex-basis: 100%;
+    }
+}
+
+.feature-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(33.333% - 1rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding the radial gradient overlay */
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Hover effects for the entire feature card */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.2);
+}
+
+/* For any icons inside the feature cards */
+.feature-card h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.feature-card p {
+    position: relative;
+    z-index: 2;
+}
+

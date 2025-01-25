@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Route all non-file/folder requests to items.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ items.php [L]

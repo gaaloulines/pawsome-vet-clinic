@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Tufuli';
+    src: url('fonts/alfont_com_TufuliArabicDEMO-Medium.ttf') format('truetype'); /* Adjust path as needed */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Tufuli', sans-serif;
+    background-image: url('backgroud_cat.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm , #registrationForm {
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+div {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff5252;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Add styles for success state */
+input.success {
+    border-color: #008000;
+}
+
+input.success + .icon::after {
+    content: '✓';
+    color: #008000;
+}
+
+/* Add styles for error state */
+input.error {
+    border-color: #ff0000;
+}
+
+input.error + .icon::after {
+    content: '✗';
+    color: #ff0000;
+}
+
+a {
+    color: #ff6b6b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff6b6b;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    #loginForm {
+        padding: 2rem;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}

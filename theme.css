@@ -1,0 +1,306 @@
+.services-main {
+    background-color: #f0f8ff;
+    min-height: calc(100vh - 100px);
+    padding: 2rem 0;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.2);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Unique styles for each service card */
+#checkups { border-top: 5px solid #ff6b6b; }
+#vaccinations { border-top: 5px solid #feca57; }
+#dental { border-top: 5px solid #48dbfb; }
+#surgery { border-top: 5px solid #ff9ff3; }
+#emergency { border-top: 5px solid #ff6b6b; }
+#grooming { border-top: 5px solid #54a0ff; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .services-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.service-card:hover .service-icon {
+    animation: pulse 1s infinite;
+}
+
+/* Styles for other pages */
+h1 {
+    text-align: center;
+    color: #ff6b6b;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tips-section, .disease-section {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #ff6b6b;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+a {
+    color: #ff6b6b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff6b6b;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+}
+
+th {
+    background-color: #ff6b6b;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* Add hover effect */
+tr:hover td {
+    background-color: #ffe5e5;
+}
+
+
+/* Disease Card Styles */
+.disease-section {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.disease-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,107,107,0.2) 0%, rgba(255,255,255,0) 70%);
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+.disease-section:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.disease-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.2);
+}
+
+.disease-icon {
+    font-size: 3rem; 
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Tip Card Styles */
+.tip-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tip-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,107,107,0.2) 0%, rgba(255,255,255,0) 70%);
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+.tip-card:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 107, 107, 0.2);
+}
+
+.tip-icon {
+    font-size: 3rem; /* Adjust as needed */
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.add-to-cart-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #54a0ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #2e86de;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(46, 134, 222, 0.2);
+}
+
